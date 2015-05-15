@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+facebook_app_id<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="app_name">facebookExample</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="facebook_app_id">1593661474184501</string>
 
 </resources>
