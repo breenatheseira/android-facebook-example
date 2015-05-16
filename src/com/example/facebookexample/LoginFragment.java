@@ -2,6 +2,7 @@ package com.example.facebookexample;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,30 +21,14 @@ public class LoginFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		
 	    View view = inflater.inflate(R.layout.fragment_login, container, false);
-
+	    Log.d("FE1", "Passed view inflater");
 	    loginButton = (LoginButton) view.findViewById(R.id.login_button);
 	    loginButton.setReadPermissions("user_friends");
+	    
 	    // If using in a fragment
 	    loginButton.setFragment(this);    
 	    // Other app specific specialization
-
-	    // Callback registration
-	    loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-	        @Override
-	        public void onSuccess(LoginResult loginResult) {
-	            // App code
-	        }
-
-	        @Override
-	        public void onCancel() {
-	            // App code
-	        }
-
-	        @Override
-	        public void onError(FacebookException exception) {
-	            // App code
-	        }
-	    });    
+	    Log.d("FE2", "set Fragment");
 	    
 	    return view;
 	}
